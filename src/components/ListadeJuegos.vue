@@ -10,7 +10,7 @@
             <li class="list-group-item">Update:</li>
         </ul>
         <div class="card-body">
-            <button class="btn btn-primary" type="submit">Opinar</button>
+            <button class="btn btn-primary" type="submit">Opinar plis</button>
             <span class="mdi mdi-heart"></span>
         </div>
     </div>
@@ -44,7 +44,9 @@
   
     },
     data: function () {
-        return {}
+        return {
+            //imagen_src:"",
+        }
     },
     // computed: {},
     //methods: {}
