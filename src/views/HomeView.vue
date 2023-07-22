@@ -4,7 +4,7 @@
     <h1>Lista de Juegos disponibles</h1>
     <br>
     <div>
-      <ListadeJuegos>
+      <ListadeJuegos :games="juegos">
       </ListadeJuegos>
     </div>
 
@@ -25,6 +25,7 @@ export default {
       opiniones: [],
       nombre: '',
       opinion: '',
+
     }
   },
   components: {
@@ -34,10 +35,16 @@ export default {
     obtenerDatos() {
       axios.get(`https://api.rawg.io/api/games?dates=2019-09-01%2C2019-09-30&key=1b401d34f5474ded8af3451186dd25f6&page=2&platforms=20%2C1%2C7/`)
         .then((resp) => {
-          this.games = resp.data.results
+          console.log(resp.data.results);
+          this.juegos = resp.data.results
         })
     },
+
   },
+  created(){
+    this.obtenerDatos()
+  }
+
 
 
 }
