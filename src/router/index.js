@@ -24,13 +24,11 @@ const routes = [
     path: '/opiniones/:name',
     component: Opiniones,
     props: true
-
   },
   {
     path: '/administracion/:admin',
     component: Administración,
     props: true
-
   },
 
 ]

@@ -4,7 +4,7 @@
             <div class="col col-12">
                 <form>
                     <br>
-                    <h2>Escribe tu opinion para el juego:{{name}}</h2>
+                    <h2>Escribe tu opinión para el juego:{{name}}</h2>
                     <br>
                     <div class="mb-3 text-start">
                         <label for="exampleInputEmail1" class="form-label ">Nombre</label>
@@ -16,7 +16,7 @@
                         <input type="text" class="form-control" v-model="user.opinion">
                     </div>
                     <div class="text-start">
-                        <button type="submit" class="btn btn-primary" @click.prevent="editarOpinion" v-if="showEdit">Editar</button>
+                        <button type="submit" class="btn btn-primary " @click.prevent="editarOpinion" v-if="showEdit">Editar</button>
                         <button type="submit" class="btn btn-primary" @click.prevent="agregarOpinion" v-else>Agregar</button>
                     </div>
                 </form>
@@ -92,4 +92,6 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+
+</style>

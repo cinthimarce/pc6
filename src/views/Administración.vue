@@ -1,5 +1,12 @@
 <template>
-    <DatosUser/>
+    <div>
+        <div v-if="nombre == ''">
+            <DatosUser @obtenerDatos="obtenerNombres"/>
+        </div>
+        
+    </div>
+
+
 </template>
 
 <script>
@@ -7,12 +14,25 @@ import DatosUser from '@/components/DatosUser.vue'
 
 export default {
     name: 'admin',
-    // props: {},
+    props: ['name'],
     data: function(){
-        return {}
+        return {
+            nombre:'',
+            apellido:'' 
+        }
     },
-    // computed: {},
-    //methods: {}
+    computed: {
+        gameName(){
+            return this.$route.params.id
+        }
+    },
+    methods: {
+        obtenerNombres(datos){
+            this.nombre = datos.nombre;
+            this.apellido = datos.apellido;
+        }
+    },
+    
     // watch: {},
     components: {
         DatosUser

@@ -22,6 +22,7 @@
                                 <button type="submit" class="btn btn-warning" @click.prevent="editarOpinion(index)">Editar</button>
                                 <button type="submit" class="btn btn-danger" @click.prevent="borrarOpinion(index)">Borrar</button>
                             </div>
+                            
                         </div>
                     </div>
 
@@ -62,4 +63,8 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.btn{
+    margin: 0 4px 20px 10px;
+}
+</style>

@@ -5,7 +5,7 @@
         <router-link to="/"> Game Opinion</router-link> 
       </span>
       <span class="mdi mdi-home">
-        <router-link to="/home">Home</router-link>
+        <router-link to="/">Home</router-link>
       </span>
     </nav>
     <router-view/>

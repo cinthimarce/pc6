@@ -36,7 +36,7 @@ export default {
     },
     data: function () {
         return {
-            //imagen_src:"",
+            
         }
     },
     // computed: {},
@@ -46,7 +46,10 @@ export default {
         },
         redirectAdmin(admin){
             this.$router.push(`/administracion/${admin}`)
-        }
+        },
+/*         redirectAdmin(admin){
+            this.$emit('viewAdmin', admin)
+        } */
     }
     // watch: {},
     // components: {},

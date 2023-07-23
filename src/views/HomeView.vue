@@ -3,8 +3,10 @@
     <br>
     <h1>Lista de Juegos disponibles</h1>
     <br>
-    <div>
-      <ListadeJuegos :games="juegos">
+    <div v-for="(juego,index) in juegos" :key="index">
+      <ListadeJuegos 
+      :games="juegos"
+      @viewAdmin="adminView(juego.name)">
       </ListadeJuegos>
     </div>
 
@@ -39,6 +41,10 @@ export default {
           this.juegos = resp.data.results
         })
     },
+    adminView(name){
+      //alert(name);
+      this.$router.push({name: 'admin', params: {id: name}});
+    } 
 
   },
   created(){
