@@ -14,7 +14,7 @@
                 </ul>
                 <div class="card-body">
                     <button class="btn btn-primary" type="submit" @click="redirect(game.name)">Opinar</button>
-                    <button class="mdi mdi-heart" @click="redirectAdmin(admin)"></button>
+                    <button class="mdi mdi-heart" @click="redirectAdmin(game.name)"></button>
                 </div>
             </div>
         </div>
@@ -31,8 +31,6 @@ export default {
             type: Array,
             required: true
         }
-
-
     },
     data: function () {
         return {
@@ -44,12 +42,11 @@ export default {
         redirect(name){
             this.$router.push(`/opiniones/${name}`)
         },
-        redirectAdmin(admin){
-            this.$router.push(`/administracion/${admin}`)
+        redirectAdmin(game){
+            console.log(game);
+            this.$router.push(`/administracion/${game}`)
+
         },
-/*         redirectAdmin(admin){
-            this.$emit('viewAdmin', admin)
-        } */
     }
     // watch: {},
     // components: {},

@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Opiniones from '@/views/Opiniones.vue'
 import Administración from '@/views/Administración.vue'
+import NotFound from '@/views/NotFound.vue'
 
 Vue.use(VueRouter)
 
@@ -26,9 +27,13 @@ const routes = [
     props: true
   },
   {
-    path: '/administracion/:admin',
+    path: '/administracion/:game',
     component: Administración,
     props: true
+  },
+  {
+    path:'*',
+    component:NotFound
   },
 
 ]

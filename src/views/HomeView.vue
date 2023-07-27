@@ -40,11 +40,16 @@ export default {
           console.log(resp.data.results);
           this.juegos = resp.data.results
         })
+        
     },
-    adminView(name){
+/*     adminView(name){
       //alert(name);
       this.$router.push({name: 'admin', params: {id: name}});
-    } 
+    }, */
+/*     adminView(name){
+      alert(name);
+      this.$router.push('/administracion/');
+    }   */
 
   },
   created(){
