@@ -33,7 +33,7 @@ const routes = [
   },
   {
     path:'*',
-    component:NotFound
+    component: NotFound
   },
 
 ]

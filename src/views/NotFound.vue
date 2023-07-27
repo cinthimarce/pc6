@@ -3,7 +3,7 @@
         <div class="error">
             <h1>Error 404</h1>
             <h1>Page NotFound</h1>
-            <router-link to="/"><button>Regresar</button></router-link>
+            <router-link to="/"><button>Regresar a inicio</button></router-link>
             <router-view/>
         </div>
     </div>
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-    name: 'component-name',
+    name: 'not-found',
     // props: {},
     data: function(){
         return {}
@@ -40,14 +40,17 @@ export default {
         background-position: center;
     }
     .error h1{
+        font-family: 'Handjet', cursive;;
         font-size: 4rem;
         font-weight: 700;
-        color: black;
+        color: white;
     }
     .error button{
-        background: orangered;
+        
+        background: yellow;
         border: none;
-        width: 155px;
+        border-radius: 5px;
+        width: 200px;
         padding: 20px;
     }
 </style>

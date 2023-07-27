@@ -13,7 +13,7 @@
             <div class="cuenta container text-start">
                 <br>
                 <h2>Resumen de tu cuenta</h2>
-                <h5>Le diste me gusta al juego <strong>{{ game }}</strong></h5>
+                <h5>Le diste me gusta al juego <strong>{{game}}</strong></h5>
                 <br>
                 <div class="card">
                     <h5 class="card-title">¿Deseas comprar coins para este juego?</h5>
@@ -22,10 +22,9 @@
                             <span class="mdi mdi-circle-multiple"></span> Agregar coins</button>
                         <hr>
                         <h5 class="text-start">Cantidad de coins comprados</h5>
-
                         <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25"
                             aria-valuemin="0" aria-valuemax="100">
-                            <div :class="[bg_color]" class="progress-bar" :style="coins">$ {{porcentaje}}</div>
+                            <div :class="[bg_color]" class="progress-bar" :style="coins">${{porcentaje}}</div>
                         </div>
                     </div>
                 </div>
@@ -120,6 +119,9 @@ export default {
             }
             if(porcentaje >50){
                 this.bg_color = 'bg-danger'
+            }
+            if(porcentaje >75){
+                this.bg_color = 'bg-info'
             }
         },
         
